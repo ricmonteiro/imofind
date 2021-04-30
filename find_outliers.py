@@ -5,9 +5,16 @@ import seaborn as sns
 from scipy.stats import stats
 from iteration_utilities import deepflatten
 
-house_data = pd.read_csv('house_data.csv', index_col=0)
+print(" Loading file... ")
+try:
+    house_data = pd.read_csv('house_data.csv', index_col=0)
+except:
+    print("Error, file not found. Please run \"python data_fetch.py")
 
 
+
+
+print("File loaded successfully! Detecting outliers... ")
 # FUNCTION THAT WILL EXTRACT OUTLIERS FROM PRICE LIST
 def detect_outliers(data):
     
@@ -55,5 +62,8 @@ outlier_indexes = list(deepflatten(outlier_indexes, depth=1))
 outlier_links = pd.DataFrame(house_data.link[outlier_indexes])
 outlier_links = outlier_links.reset_index(drop=True)
 
+print(" All outliers have been extracted! Saving file...")
 # create csv with links
-outlier_links.to_csv('outlier_links')
+outlier_links.to_csv('outlier_links.csv')
+
+print(" File saved successfully! Look for outlier_link.csv in your directory ")

@@ -31,10 +31,12 @@ location = []
 sizes = [] 
 links = []
 
+print(" Website accessed, extracting data... (this might take a few minutes) ")
+
 for u in urls:
     imo = requests.get(u) # request http
     raw_html = imo.text # convert webpage code into raw text
-    soup = bs(raw_html) # soupify page text
+    soup = bs(raw_html, features='lxml') # soupify page text
 
     # Find the desired data: price, location (concelho), typology and size (m2)
 
@@ -56,7 +58,10 @@ for u in urls:
         
     for link in soup.find_all('header', class_="offer-item-header"):
         links.append(link.a['href'])
-        
+
+
+print(" Data extracted successfully. Cleaning and creating file... ")
+
 all_houses = [] # list where all houses will be
 all_houses.append([prices, types, location, sizes, links])
 columns = ['price','type','location','size','link'] # columns names for the dataframe
@@ -98,4 +103,4 @@ all_data = all_data.reset_index()
 
 # save data to local csv file
 all_data.to_csv('house_data.csv', index=False)
-all_data
+print(" All done! File created sucessfully! Search for house_data.csv in your directory. ")
