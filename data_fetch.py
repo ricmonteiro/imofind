@@ -2,7 +2,6 @@
 # using beautifulsoup, requests and pandas
 
 from bs4 import BeautifulSoup as bs
-import grequests
 import requests
 import pandas as pd
 
