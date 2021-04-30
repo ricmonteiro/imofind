@@ -10,7 +10,7 @@ It's divided in two files, data_fetch and find_outliers.
 
 The final output is a csv with all the links for the ouliers.
 
-To get the csv, open the directory where the files are located and type in the terminal:
+To get the final csv with the "hot" links, open the directory where the files are located and type in the terminal:
 
 $ python3 data_fetch.py or $ python3 data_fetch.py
 
