@@ -98,6 +98,7 @@ all_data['size'] = all_data['size'].replace(',','.', regex=True).astype('float')
 all_data['price'] = all_data['price'].replace(',','.', regex=True).astype('float').round().astype('int')
 
 
+
 # reset index to match number of posts
 all_data = all_data.reset_index()
 
