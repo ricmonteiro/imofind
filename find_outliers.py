@@ -14,7 +14,7 @@ except:
 
 
 
-print("File loaded successfully! Detecting outliers... ")
+print(" File loaded successfully! Detecting outliers... ")
 # FUNCTION THAT WILL EXTRACT OUTLIERS FROM PRICE LIST
 def detect_outliers(data):
     
@@ -66,4 +66,4 @@ print(" All outliers have been extracted! Saving file...")
 # create csv with links
 outlier_links.to_csv('outlier_links.csv')
 
-print(" File saved successfully! Look for outlier_link.csv in your directory ")
+print(" File saved successfully! Look for outlier_links.csv in your directory. ")
