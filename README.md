@@ -12,7 +12,7 @@ The final output is a csv with all the links for the ouliers.
 
 To get the final csv with the "hot" links, open the directory where the files are located and type in the terminal:
 
-$ python3 data_fetch.py or $ python3 data_fetch.py
+$ python3 data_fetch.py o
 
 After, type:
 
