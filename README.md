@@ -12,11 +12,13 @@ The final output is a csv with all the links for the ouliers.
 
 To get the csv, open the directory where the files are located and type in the terminal:
 
-$ python data_fetch.py or $ python3 data_fetch.py
+$ python3 data_fetch.py or $ python3 data_fetch.py
 
 After, type:
 
-$ python find_outliers.py
+$ python3 find_outliers.py
+
+Note: using python in the command line gave an error that doensn't happen when running the script in python3
 
 
 
