@@ -1,6 +1,7 @@
 # imofind
 ## Finding outliers on house rental website
 
+![imofind](https://user-images.githubusercontent.com/51707272/154373256-6f167cf8-1f2e-40af-bb05-d496513e4e2a.jpg)
 
 
 Finding a good deal on a house might be difficult. Also, fraudulent posts often appear as "too good to be true", where a good house is cheaper than normal for a given 
