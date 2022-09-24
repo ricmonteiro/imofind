@@ -6,8 +6,6 @@ import requests
 import pandas as pd
 
 
-
-
 imo = requests.get('https://www.imovirtual.com/arrendar/apartamento/') # request http
 raw_html = imo.text # convert webpage code into raw text
 soup = bs(raw_html, features='lxml') # soupify page text
@@ -41,7 +39,9 @@ for u in urls:
 
     # price
     for price in soup.find_all('li', class_="offer-item-price"): 
+        print(price.string.split('€')[0].replace(' ','').strip())
         prices.append(price.string.split('€')[0].replace(' ','').strip())
+
 
     #type 
     for ty in soup.find_all('li', class_="offer-item-rooms hidden-xs"):
@@ -92,9 +92,13 @@ all_data['municipality'] = municipality
 all_data['district'] = district
 all_data = all_data.drop(columns='location', axis=1)
 
+
 # change size column to float and price to int
 all_data['size'] = all_data['size'].replace(',','.', regex=True).astype('float')
 all_data['price'] = all_data['price'].replace(',','.', regex=True).astype('float').round().astype('int')
+
+
+
 
 
 
