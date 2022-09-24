@@ -19,9 +19,6 @@ After, type:
 
 $ python3 find_outliers.py
 
-Note: using python in the command line gave an error that doensn't happen when running the script in python3
-
-
 
 
 
